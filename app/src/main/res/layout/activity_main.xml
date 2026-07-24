@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:padding="16dp">
+
+    <!-- Top Icons Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="24dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:layout_marginEnd="20dp"
+            android:alpha="0.6"/>
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_manage"
+            android:layout_marginEnd="20dp"
+            android:alpha="0.6"/>
+
+        <ImageView
+            android:id="@+id/ivSettings"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@android:drawable/ic_menu_preferences"
+            android:alpha="0.1"/>
+    </LinearLayout>
+
+    <!-- Calculator Display Screen -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_alignParentStart="true"
+        android:gravity="bottom|end"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="64sp"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:ellipsize="start"/>
+
+    <!-- Keypad Container (Fixed to the Bottom of the screen) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_horizontal">
+
+        <!-- Row 1 -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <Button android:id="@+id/btnClear" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="C" android:textColor="#FF5252" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnBack" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="⌫" android:textColor="#FF8A80" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnPercent" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="%" android:textColor="#80CBC4" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnDivide" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="÷" android:textColor="#80CBC4" android:textSize="26sp" android:background="@drawable/rounded_button"/>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <Button android:id="@+id/btn7" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="7" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn8" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="8" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn9" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="9" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnMultiply" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="×" android:textColor="#80CBC4" android:textSize="26sp" android:background="@drawable/rounded_button"/>
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <Button android:id="@+id/btn4" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="4" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn5" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="5" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn6" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="6" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnMinus" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="-" android:textColor="#80CBC4" android:textSize="26sp" android:background="@drawable/rounded_button"/>
+        </LinearLayout>
+
+        <!-- Row 4 -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <Button android:id="@+id/btn1" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="1" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn2" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="2" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn3" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="3" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnPlus" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="+" android:textColor="#80CBC4" android:textSize="26sp" android:background="@drawable/rounded_button"/>
+        </LinearLayout>
+
+        <!-- Row 5 -->
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/btnBracket" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="( )" android:textColor="#FFFFFF" android:textSize="18sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btn0" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="0" android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnDot" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="." android:textColor="#FFFFFF" android:textSize="22sp" android:background="@drawable/rounded_button"/>
+            <Button android:id="@+id/btnEquals" android:layout_width="76dp" android:layout_height="76dp" android:layout_margin="6dp" android:text="=" android:textColor="#FFFFFF" android:textSize="26sp" android:background="@drawable/rounded_equals"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#222222"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Upar ka Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Secret Vault"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Yahan humari selected photo dikhegi -->
+    <ImageView
+        android:id="@+id/ivSecretImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:background="#444444"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- Photo add karne ka Button -->
+    <Button
+        android:id="@+id/btnAddImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Image from Gallery"
+        android:textSize="18sp"
+        android:padding="12dp"/>
+    <!-- Secret Gallery dekhne ka Button -->
+    <Button
+        android:id="@+id/btnViewGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View My Secret Gallery"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FF9800"/>
+
+</LinearLayout>
